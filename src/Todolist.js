@@ -8,7 +8,7 @@ class Todolist extends Component {
             <div>
             <ul>
                 {
-                    items.map(todo => <li><Todoitem text={todo} /></li>)
+                    items.map((todo, i) => <li key={i}><Todoitem text={todo} /></li>)
                 }
             </ul>
             </div>

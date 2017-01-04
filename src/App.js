@@ -9,11 +9,12 @@ class App extends Component {
     this.state = {
       todoItems: []
     }
+    this.addTodo = this.addTodo.bind(this)
   }
 
   addTodo(newTodo) {
     this.setState({
-      todoItems: this.state.todoItems.push(newTodo)
+      todoItems: this.state.todoItems.concat([newTodo])
     })
   }
 
@@ -21,7 +22,7 @@ class App extends Component {
     let { todoItems } = this.state
     return (
       <div>
-        <TodoInput />
+        <TodoInput onAddTodo={this.addTodo} />
         <Todolist items={todoItems} />
       </div>
     )
