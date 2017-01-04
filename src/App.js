@@ -11,6 +11,12 @@ class App extends Component {
     }
   }
 
+  addTodo(newTodo) {
+    this.setState({
+      todoItems: this.state.todoItems.push(newTodo)
+    })
+  }
+
   render() {
     let { todoItems } = this.state
     return (
