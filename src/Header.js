@@ -6,7 +6,7 @@ class Header extends Component {
 
         currentUser = "Logged in as " + currentUser
         return (
-            <div>Header {currentUser} {isLoggedIn}</div>
+            <div> { isLoggedIn && currentUser }</div>
         )
     }
 }
