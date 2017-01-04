@@ -3,10 +3,13 @@ import Todoitem from "./Todoitem"
 
 class Todolist extends Component {
     render() {
+        let { items } = this.props
         return (
             <div>
             <ul>
-                <li><Todoitem /></li>
+                {
+                    items.map(todo => <li><Todoitem /></li>)
+                }
             </ul>
             </div>
         )
