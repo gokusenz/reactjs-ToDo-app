@@ -4,7 +4,7 @@ class Header extends Component {
     render(){
         let { currentUser, isLoggedIn } = this.props
         return (
-            <div>Header {this.props.currentUser}</div>
+            <div>Header {currentUser} {isLoggedIn}</div>
         )
     }
 }
